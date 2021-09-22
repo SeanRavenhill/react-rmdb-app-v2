@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { Wrapper, Content, Text } from "./HeroImage.styles";
 
-// NB the use props destructuring here for image, title and text
+// NB the use of props destructuring here for image, title and text
 const HeroImage = ({ image, title, text }) => (
 	<Wrapper image={image}>
 		<Content>
