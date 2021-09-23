@@ -12,7 +12,7 @@ import NoImage from "../../images/no_image.jpg";
 // Styles
 import { Wrapper, Content, Text } from "./MovieInfo.styles";
 
-const MovieInfo = ({ movie, alt }) => (
+const MovieInfo = ({ movie }) => (
 	<Wrapper backdrop={movie.backdrop_path}>
 		<Content>
 			<Thumb
@@ -22,7 +22,7 @@ const MovieInfo = ({ movie, alt }) => (
 						: NoImage
 				}
 				clickable={false}
-				alt={alt}
+				alt={`Title: ${movie.title}`}
 			/>
 			<Text>
 				<h1>{movie.title}</h1>
