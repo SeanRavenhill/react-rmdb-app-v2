@@ -1,7 +1,7 @@
 import React from "react";
 
 // Component
-import Thumb from "../Thumb";
+import MovieInfoPoster from "../MovieInfoPoster";
 
 // Config
 import { IMAGE_BASE_URL, BACKDROP_SIZE } from "../../config";
@@ -15,13 +15,12 @@ import { Wrapper, Content, Text } from "./MovieInfo.styles";
 const MovieInfo = ({ movie }) => (
 	<Wrapper backdrop={movie.backdrop_path}>
 		<Content>
-			<Thumb
+			<MovieInfoPoster
 				image={
 					movie.poster_path
 						? `${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.poster_path}`
 						: NoImage
 				}
-				clickable={false}
 				alt={`Title: ${movie.title}`}
 			/>
 			<Text>
