@@ -18,16 +18,10 @@ import { useHomeFetch } from "../hooks/useHomeFetch";
 import NoImage from "../images/no_image.jpg";
 
 const Home = () => {
-	const { 
-		state,
-		loading,
-		error,
-		searchTerm,
-		setSearchTerm,
-		setIsLoadingMore
-	} = useHomeFetch();
+	const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } =
+		useHomeFetch();
 
-	if (error) return (<div>Something went wrong...</div>);
+	if (error) return <div>Something went wrong...</div>;
 
 	return (
 		<React.Fragment>
@@ -38,7 +32,7 @@ const Home = () => {
 					text={state.results[0].overview}
 				/>
 			) : null}
-			<SearchBar setSearchTerm={setSearchTerm}/>
+			<SearchBar setSearchTerm={setSearchTerm} />
 			<Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
 				{state.results.map((movie) => (
 					<Thumb
