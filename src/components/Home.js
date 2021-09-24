@@ -6,7 +6,7 @@ import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from "../config";
 // Components
 import HeroImage from "./HeroImage";
 import Grid from "./Grid";
-import Thumb from "./Thumb";
+import ThumbHover from "./ThumbHover";
 import Spinner from "./Spinner";
 import SearchBar from "./SearchBar";
 import Button from "./Button";
@@ -41,7 +41,7 @@ const Home = () => {
 			<SearchBar setSearchTerm={setSearchTerm}/>
 			<Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
 				{state.results.map((movie) => (
-					<Thumb
+					<ThumbHover
 						key={movie.id}
 						clickable
 						image={
